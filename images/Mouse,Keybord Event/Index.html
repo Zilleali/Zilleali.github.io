@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-git.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script>
+	
+        function moveButton(elem){
+            if( $(elem).parent().attr("id") == "nonSelected" ){
+                $(elem).detach().appendTo('#selected');
+            }
+            else{
+                $(elem).detach().appendTo('#nonSelected'); 
+            }
+        }
+        </script>
     <title>Document</title>
 </head>
 <body>
+    <div id="nonSelected">
+        <!--Declaring BUTTON TAGS -->
+        <button id="btnDefault" onclick="moveButton(this)" type="button">Button1</button>
+            <button id="btnPrimary" onclick="moveButton(this)" type="button" >Button2</button>
+            
+              <button id="btnDanger" onclick="moveButton(this)" type="button">Button3</button>
+              <button id="btnDanger" onclick="moveButton(this)" type="button">Button4</button>
+              
+              </div>
+              <div id="selected">
+              </div>
 
 </body>
 </html>
